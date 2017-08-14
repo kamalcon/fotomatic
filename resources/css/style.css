@@ -5,12 +5,6 @@ html {
   font-size: 16px;
 }
 
-body {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-}
-
 .main-content {
   position: relative;
   top: 5.3125rem; /* To offset for fixed header. */
@@ -44,10 +38,10 @@ body {
 
 header {
   position: fixed;
+	z-index: 5;
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
-	z-index: 5;
 }
 
 header .content {
@@ -60,13 +54,12 @@ header .logo {
   flex: 1;
 }
 
-nav {
-	width: 300px;
-}
-
 header nav ul {
   display: flex;
-	justify-content: space-between;
+}
+
+nav li {
+  padding-left: 3.5rem;
 }
 
 nav a {
@@ -120,22 +113,25 @@ header .mobile {
 
 /* Sign Up Section */
 
-#sign-up-section {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  height: 43.5rem;
+.banner {
 	background-image: url(../images/banner-landingpage.jpg);
 	background-size: cover;
 	background-position: right;
 }
 
+#sign-up-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 43.5rem;
+}
+
 #sign-up-cta {
+	margin: 10.265rem 0 10.265rem 6.25rem;
   padding: 0 5rem 2.5rem 5rem;
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
-	margin: 170px 100px;
 }
 
 #sign-up-cta .content {
@@ -241,6 +237,11 @@ header .mobile {
   margin: 0 auto;
 }
 
+.feature img {
+	width: 100%;
+	height: auto;
+}
+
 .feature h2 {
   padding-bottom: .5rem;
   font-size: 2.25rem;
@@ -255,13 +256,9 @@ header .mobile {
   color: #4a4a4a;
 }
 
-.feature img {
-	max-width: 100%;
-	height: auto;
-}
-
-.content {
-	padding: 2.5rem 0;
+.feature .content {
+	padding-top: 2.5rem;
+	height: 139px;
 }
 
 @media only screen and (max-width: 890px) {
@@ -275,7 +272,6 @@ header .mobile {
     font-size: .875rem;
     line-height: 1.4;
   }
-
 }
 
 @media only screen and (max-width: 760px) {
@@ -316,19 +312,10 @@ header .mobile {
 }
 
 #filters-section .images-container {
-  width: 100%;
+  max-width: 100%;
   padding: 0 1%;
-	margin: 0 auto;
 }
 
-.image-container {
-	width: 24%;
-	display: inline-block;
-}
-
-.image-container img {
-	max-width: 100%;
-}
 @media only screen and (max-width: 760px) {
   #filters-section {
     padding: 1.5rem 0 0 0;
