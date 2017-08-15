@@ -47,8 +47,9 @@ header {
 
 header .content {
   display: flex;
+	justify-content: space-between;
   align-items: center;
-  padding: 1.875rem;
+	padding: 1.875rem;
 }
 
 header .logo {
@@ -75,14 +76,46 @@ header .icon {
   padding-left: .75rem;
 }
 
-header .mobile {
+header .mobile, .tablet {
   display: none;
 }
 
+header .button {
+    padding: .1875rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+  }
+
 @media only screen and (max-width: 760px) {
-  header .desktop {
+	
+	header .desktop {
     display: none;
   }
+	
+	header .tablet {
+    display: block;
+  }
+	
+	header .content {
+		padding: 1rem 1.875rem;
+	}
+	
+	nav li {
+  	padding-left: 1.5rem;
+	}
+	
+}
+
+@media only screen and (max-width: 550px) {
+	
+	header .tablet {
+    display: none;
+  }
+	
+	header .logo {
+		display: none;
+	}
 
   header .mobile {
     display: block;
@@ -177,7 +210,9 @@ header .mobile {
     height: 28rem;
   }
 
-  #sign-up-cta {
+	#sign-up-cta {
+		margin: 0;
+		padding: 0;
     position: static;
     width: auto;
     height: auto;
@@ -273,6 +308,12 @@ header .mobile {
     font-size: .875rem;
     line-height: 1.4;
   }
+	
+	.feature .content {
+		padding: 1rem 1rem 2rem 1rem;
+		height: auto;
+}
+	
 }
 
 @media only screen and (max-width: 760px) {
@@ -282,8 +323,8 @@ header .mobile {
   }
 
   .feature {
-    margin: 0;
-    padding: 1.25rem 1rem 0 1rem;
+		margin: 0;
+    padding: 1rem 1rem 0 1rem;
   }
 }
 
@@ -295,7 +336,7 @@ header .mobile {
 }
 
 #filters-section .content {
-  margin-bottom: 5rem;
+  padding: 1rem 2rem 2rem 2rem;
 }
 
 #filters-section .content h2 {
@@ -322,7 +363,7 @@ header .mobile {
 	width: 25%;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 450px) {
   #filters-section {
     padding: 1.5rem 0 0 0;
   }
@@ -350,6 +391,11 @@ header .mobile {
   #filters-section .extra {
     display: none;
   }
+	
+	#filters-section .image-container {
+		width: 33.33333%;
+	}
+	
 }
 
 /* Quotes Section */
@@ -377,7 +423,7 @@ header .mobile {
 
 @media only screen and (max-width: 760px) {
   #quotes-section .content {
-    padding: 1.875rem .625rem;
+   	padding: 1rem 1rem 2rem 1rem;
   }
 
   #quotes-section .quote {
